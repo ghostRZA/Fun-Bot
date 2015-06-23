@@ -9,7 +9,7 @@ Permission to change anything on this script, You can always contact the author 
 [Plug Lounge](http://goo.gl/cMMMc1)
 If there happen to be a bug or problem with the bot you can report issue [HERE](https://github.com/DJ-Neon05/Fun-Bot/issues). I'll work on it ASAP! Thanks :)
 
-##### Fun bot version: 3.0.0
+##### Fun bot version: 3.1.0
 ##### Updated: Jun/23/15
 
 You can customize this bot script once you fork it.
