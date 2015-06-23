@@ -1,0 +1,27 @@
+var logged = [];
+var plugbot = [];
+var version = "1.0";
+var API = API;
+
+API.on(API.USER_JOIN, userjoin);
+
+API.on(API.CHAT, function(data){
+	var msg = data.message;
+	var msgid = data.cid;
+	var user = data.un;
+	var userid = data.uid;
+	if (userid == API.getUser().id){
+		logged.unshift(msgid);
+		console.log(msg + " (" + msgid + ")");
+	};
+});
+
+function userjoin(user){
+    var JoinMsg = ["@user has joined!", "welcome, @user!", "Hey there, @user!", "Glad you came by, @user"];
+    var r = Math.floor(Math.random() * JoinMsg.length);
+    API.sendChat(JoinMsg[r].replace("user", user.un));
+};
+
+if (API.getUser().role <= 1){
+	API.chatLog("<a style='color:red;'><b>This script only works for Bouncer+.</b></a> Sorry!","#CCCCCC");
+}
