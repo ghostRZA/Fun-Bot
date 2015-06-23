@@ -1221,10 +1221,6 @@ if (window.location.hostname === "plug.dj") {
     console.log("Funbot-Script version " + Funbot.misc.version);
 
     setTimeout(function () {
-        $.getScript('http://connect.soundcloud.com/sdk.js');
-    }, 700);
-
-    setTimeout(function () {
         SC.initialize({
             client_id: '23025049683040'
         });
