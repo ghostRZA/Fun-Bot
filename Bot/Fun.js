@@ -33,6 +33,7 @@
 
 
 //                                              ====== FUN BOT SCRIPT  ======
+
 Array.prototype.Shift = function () { return Array.prototype.shift.call(this), this; };
 
 var Funbot = {};
@@ -48,7 +49,7 @@ toSave = {};
 toSave.settings = Funbot.settings;
 toSave.moderators = Funbot.moderators;
 
-Funbot.misc.version = "3.0.12";
+Funbot.misc.version = "3.0.0";
 Funbot.misc.ready = true;
 var songBoundary = 60 * 10;
 var announcementTick = 60 * 10;
@@ -71,7 +72,7 @@ Funbot.settings.interactive = true;
 Funbot.settings.ruleSkip = true;
 Funbot.settings.removedFilter = true;
 
-// Admins ID
+// Admins ID  *Anyone can change these*
 Funbot.admins = ["3852632", '5448898'];
 
 // ROLE PERMISSION
@@ -1171,12 +1172,12 @@ if (window.location.hostname === "plug.dj") {
             return API.moderateDeleteChat(chatID), true;
     });
 
-    API.on(API.CHAT, function (data) { // Chat Function #3
+    /*API.on(API.CHAT, function (data) { // Chat Function #3
         msg = data.message.toLowerCase().replace(/&colon;/g, ':'),
 	        chatID = data.cid,
 	        fromID = data.uid,
 	        userfrom = data.un;
-        /* Match Arrays */
+        // Match Arrays 
         var inputMatches = [
         	[':eyeroll:', ':notamused:', ':yuno:'], // "Misc" Messages
         	['hello bot', 'bot hello', 'hi bot', 'bot hi', 'sup bot', 'bot sup', 'hey bot', 'bot hey', 'howdy bot', 'bot howdy', 'aye bot', 'yo bot', 'waddup bot', 'bot waddup'], // "Hello" Messages
@@ -1188,7 +1189,7 @@ if (window.location.hostname === "plug.dj") {
         	['i got to go', 'igtg', 'gtg', 'be back', 'going off', 'off to', 'have to go', 'bye bot', 'bot bye'] // "Afk" Messages
         ];
         var outputMessages = [
-			['/me ¬_¬', '/me ಠ_ಠ', '/me ლ(ಥ益ಥლ'], // "Misc" Messages
+			['¬_¬', 'ಠ_ಠ', 'ლ(ಥ益ಥლ'], // "Misc" Messages
 			['Hey!', 'Oh hey there!', 'Good day sir!', 'Hi', 'Howdy!', 'Waddup!'], // Hello Messages
 			['I\'m good thanks for asking :)', 'Doing great yo and yourself?', 'All Good Mate!', 'I\'m good thanks for asking!', 'Yeee i\'m cool and youself yo?'], // "Hru" Messages
 			["You're welcome! :D", "Your always welcome bro!", "No prob man.."], // "TY" Messages
@@ -1214,7 +1215,7 @@ if (window.location.hostname === "plug.dj") {
                     if (msg.match(inputMatches[i][x]))
                         return sendMessage(outputMessages[x][Math.floor(Math.random() * outputMessages[x].length)], true);
         }
-    });
+    });*/
 
     botMethods.loadStorage();
     console.log("Funbot-Script version " + Funbot.misc.version);
