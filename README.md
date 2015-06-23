@@ -192,7 +192,7 @@ How to function it? scroll down [HERE](https://github.com/DJ-Neon05/Fun-Bot#inst
 ## Installing Bot
 Copy and paste this code to your bookmarks bar and rename it to whatever you like.
 ```Javascript
-javascript:(function(){$.getScript('http://goo.gl/MMsPi1');}());
+javascript:(function(){$.getScript('https://goo.gl/mJU849');}());
 ```
 You can function your own bot script after forking this script.
 ```JavaScript
